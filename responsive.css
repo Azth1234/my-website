@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 2vw;
+    color: antiquewhite;
+}
+header{
+    background-color: rgb(22, 20, 20);
+}
+h1{
+    text-align: center;
+    font-size: 4vw;
+    padding: 10px;
+    color: rgb(243, 124, 27);
+}
+#h2_a{
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(191, 25, 45);
+    font-family: "Papyrus", fantasy;;
+}
+#h2_b{
+    text-align: center;
+    font-size: 3vw;
+    color: rgb(183, 5, 5);
+    font-family: "Courier New", monospace;
+}
+h3{
+    color: rgb(250, 190, 37);
+    text-decoration: underline dashed salmon;
+    font-family: "Courier New", monospace;
+    padding-bottom: 5px;
+}
+#img_logo{
+    max-width: 30%;
+}
+body{
+    background: linear-gradient(135deg, black, #56437e);
+}
+#divbody{
+    width: 95%;
+    padding: 20px;
+    text-align: justify;
+}
+p{
+    padding: 10px;
+}
+div.scroll-container {
+    background-color: #d17e01;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px;
+  }
