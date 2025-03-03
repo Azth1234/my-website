@@ -45,9 +45,42 @@ body{
 p{
     padding: 10px;
 }
-div.scroll-container {
-    background-color: #d17e01;
-    overflow: auto;
-    white-space: nowrap;
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;  /* Prevents images from wrapping */
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    overflow-y: hidden; /* Hides vertical scrollbar */
+    gap: 5px;
     padding: 5px;
-  }
+    background-color: #d17e01;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+/* Ensure images stay in a row and are scrollable */
+.scroll-container img {
+    flex: 0 0 auto;  /* Prevents images from shrinking */
+    width: auto;
+    max-height: 300px; /* Set a reasonable height */
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar for cleaner look (optional) */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .scroll-container {
+        padding: 10px;
+        width: 100%; /* Ensures full width */
+    }
+    
+    .scroll-container img {
+        max-width: 80%; /* Adjust width for mobile */
+        height: auto;
+    }
+}
+
